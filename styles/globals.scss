@@ -1,0 +1,91 @@
+@import './slider.scss';
+@font-face {
+    font-family: 'TT Severs';
+    src: local('TTSevers-Regular'),
+        url('../fonts/TTSevers-Regular.woff2') format('woff2'),
+        url('../fonts/TTSevers-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Severs';
+    src: local('TTSevers-Medium'),
+        url('../fonts/TTSevers-Medium.woff2') format('woff2'),
+        url('../fonts/TTSevers-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Severs';
+    src: local('TTSevers-DemiBold'),
+        url('../fonts/TTSevers-DemiBold.woff2') format('woff2'),
+        url('../fonts/TTSevers-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Severs';
+    src: local('TTSevers-Bold'),
+        url('../fonts/TTSevers-Bold.woff2') format('woff2'),
+        url('../fonts/TTSevers-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+main,
+footer{
+    background: #F7F7F7;
+}
+* {
+    font-family: 'TT Severs';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+ul,
+li,
+dl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+hr{
+    border: 1px solid #EBEBEB;
+}
+
+
+
+

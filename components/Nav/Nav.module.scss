@@ -1,0 +1,89 @@
+.headNav{
+    padding: 16px 0 16px 0;
+    
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.headNavList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 785px;
+    height: 21px;
+    li{
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.015em;
+      text-transform: uppercase;
+      color: #182840;
+      cursor: pointer;
+      &.active
+      {
+        color: rgb(255, 117, 52);
+        display: flex;
+        width: 70px;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        gap: 8px;
+        img {
+          display: inline;
+          
+        } 
+      }
+      img {display: none;} 
+    }
+  }
+    
+  .live{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4px 0px 2px;
+    align-items:center;
+    width: 62px;
+    height: 21px;
+    
+  }
+  .liveDot{
+    width: 20px;
+    height: 20px;
+   
+  }
+  .liveDescri{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #182840;
+  }
+
+  .dotOne {
+    animation: 1s linear 0s infinite blink;
+  }
+  
+  .dotTwo {
+    animation-delay: 0.25s;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+ 
+
+  
+  

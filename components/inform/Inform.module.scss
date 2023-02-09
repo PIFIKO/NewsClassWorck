@@ -1,0 +1,67 @@
+.inform{
+    border-top: 1px solid #DEDFE0;
+    border-bottom: 1px solid #DEDFE0;
+}
+.container{
+    display: block;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 58px 0 62px 0 ;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(6, minmax( 61px, auto));
+    column-gap: 124.6px;
+}
+.informBlock{
+    margin-bottom: 24px;
+}
+.title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    color: #2D2D2D;
+}
+.descrip{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #515151;
+    margin-top: 8px;
+}
+.About{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #2D2D2D;
+    margin-bottom: 24px;
+}
+.contactUs{
+    width: 895px;
+    height: 88px;
+    margin-top: 66px;
+}
+.contactUsTitle{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: #2D2D2D;
+}
+.contactUswrapper{
+    display: flex;
+    gap: 32px;
+    margin-top: 32px;
+}
+.contactUsDes{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #434343;
+    height: 22px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 12px;
+    
+}

@@ -1,0 +1,36 @@
+
+.img{
+    height: 100%;
+    background: rgba(255, 255, 255, 0.32);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+}
+.wrapper{
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
+}
+.title{
+    text-align: left;
+    padding: 2px 0px 0px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    font-weight: 600;
+    width: 208px;
+    height: 63px;
+}
+.description{
+    position: absolute;
+    width: 752px;
+    height: 192px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+    text-align: left;
+    top: 234px;
+    left: 64px;
+}

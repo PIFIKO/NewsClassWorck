@@ -1,0 +1,89 @@
+
+.columns{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 16px 16px 24px 16px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+.wrapperCol{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: #2D2D2D;
+}
+.allCol{
+    border: none;
+    background:none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FF7534;
+    cursor: pointer;
+}
+.pepolWrapp{
+    hr{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+    
+}
+.pepolWrapp hr:nth-last-child(1) { 
+    display: none;
+  }
+
+.wrapperFoTex{
+    display: flex;
+
+    align-items:center;
+    gap: 16px;
+}
+.name{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #2D2D2D;
+}
+.position{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 4px;
+}
+.des{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    color: #182840;
+    margin-top: 16px;
+}
+.time{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 12px;
+}
+.allCols{
+    width: 272px;
+    height: 37px;
+    border: 1px solid #979EA9;
+    border-radius: 4px;
+    background: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #182840;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 81px;
+}
