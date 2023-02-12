@@ -1,7 +1,14 @@
-
+.pepolWrapp{
+    
+}
+.pepol{
+    height: 210px;
+    padding: 24px 0 24px 0;
+    border-bottom: 1px solid #DEDFE0;
+}
 .columns{
     grid-column: 1/2;
-    grid-row: 1/2;
+    height: 991px; 
     padding: 16px 16px 24px 16px;
     background: #FFFFFF;
     border-radius: 12px;
@@ -9,7 +16,6 @@
 .wrapperCol{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 32px;
 }
 .title{
     font-weight: 600;
@@ -26,16 +32,6 @@
     color: #FF7534;
     cursor: pointer;
 }
-.pepolWrapp{
-    hr{
-        margin-top: 24px;
-        margin-bottom: 24px;
-    }
-    
-}
-.pepolWrapp hr:nth-last-child(1) { 
-    display: none;
-  }
 
 .wrapperFoTex{
     display: flex;
@@ -82,8 +78,7 @@
     font-size: 16px;
     line-height: 140%;
     color: #182840;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    margin-top: 81px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 48px;
 }

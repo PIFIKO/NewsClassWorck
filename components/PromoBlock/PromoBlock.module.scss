@@ -1,0 +1,103 @@
+
+.bgButtonNext{
+    width: 180px;
+    height: 165px;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    top: -15px;
+    background: linear-gradient(270deg, #FFFFFF 34.24%, rgba(217, 217, 217, 0) 105.15%, rgba(255, 255, 255, 0) 105.15%);
+    transform: rotate(0deg);
+}
+
+.bgButtonPrev{
+    width: 105px;
+    height: 165px;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: -15px;
+    background: linear-gradient(90deg, #FFFFFF 34.24%, rgba(217, 217, 217, 0) 105.15%, rgba(255, 255, 255, 0) 105.15%);
+    transform: rotate(0deg);
+}
+.pomoBlock{
+    padding: 16px;
+    width: 304px;
+    height: 105px;
+    background: #F7F7F7;
+    border-radius: 8px;
+}
+.newsDes{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #182840;
+}
+
+
+
+.promo{
+    grid-column: 2/3;
+    margin-top: 30px;
+    padding: 32px 24px 32px 24px;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+.wrapperCol{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: #2D2D2D;
+}
+.allCol{
+    border: none;
+    background:none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FF7534;
+    cursor: pointer;
+}
+.wrapperPromo{
+    display: flex;
+    gap: 32px;
+    width: 833px;
+    height: 158px;
+}
+.timeWrapper{
+    display: flex;
+    align-items:center;
+    
+    gap: 16px;
+    width: 529px;
+    height: 22px;
+
+}
+.timePromo{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #707070;
+    margin-top: 2px;
+}
+.titlePromo{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    margin-top: 10px;
+    color: #182840;
+}
+.labelePromo{
+    display: flex;
+    gap: 12px;
+    img{
+        width: 16px;
+        height: 16px;
+    }
+}
