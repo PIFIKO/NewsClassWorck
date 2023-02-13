@@ -105,12 +105,25 @@
     margin-bottom:16px;
     height: 20px;
     gap: 12px;
+    img{
+        padding: 0px 0px 4px;
+        width: 16px;
+        height: 20px;
+    }
 }
 .newsHeveDesFire{
     font-weight: 600;
     font-size: 14px;
     line-height: 140%;
     color: #FF7534;
+    display: flex;
+    align-items: center;
+}
+.newsHeveDesCam{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: #979EA9;
     display: flex;
     align-items: center;
 }

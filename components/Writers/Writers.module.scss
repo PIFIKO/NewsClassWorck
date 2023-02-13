@@ -6,6 +6,9 @@
     padding: 24px 0 24px 0;
     border-bottom: 1px solid #DEDFE0;
 }
+.pepol:nth-last-child(1){
+    border-bottom: none;
+}
 .columns{
     grid-column: 1/2;
     height: 991px; 
