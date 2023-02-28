@@ -156,4 +156,21 @@
     top: 468px;
     width: 35px;
     height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.counerNum{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    
+}
+.counerDisabled{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    opacity: 0.5;
 }
