@@ -99,7 +99,7 @@ export const  images = [
   const disabeld = props.disabled ? `${style.counerNum}` : `${style.counerDisabled}`;
   return(
     <div  className= {style.couner}>
-      <span className={style.counerNum}>{props.currentSlide + 1}</span>
+      <span style={{ opacity: props.style, transition: '.6s all' }} className={style.counerNum}>{props.currentSlide + 1}</span>
         <span className={style.counerNum}>/</span> 
       <span className={disabeld}>{props.total}</span>
     </div>
@@ -122,12 +122,12 @@ const News = () => {
       setLoaded(true)
     },
     detailsChanged(s) {
-      const new_opacities = s.track.details.slides.map((slide) => {
-      return(
-        slide.portion
-      )
-    })
+      const new_opacities = s.track.details.slides.map((slide) => slide.portion != 1 ? 0 : slide.portion)
+      // new_opacities.map((item) => item === 1 ? setOpacities(new_opacities) : [0])
+      // console.log(s)
+
       setOpacities(new_opacities)
+      console.log(new_opacities)
     },
   })
 
@@ -148,7 +148,6 @@ const News = () => {
     },
     [Plugin]
   )
- 
 
   return (
     <div className={style.container}>
@@ -156,8 +155,8 @@ const News = () => {
         { images.map(({img, description}, idx) =>{
             return(
               <div 
-              className= "keen-slider__slide" 
-              style={{ opacity: opacities[idx] }}
+               className= {style.fader__slide} 
+              style={ {opacity: opacities[idx] , transition: '.8s all'}}
               key = {idx} >
                       <a href="#"  className={style.description}>{description}</a>
                       <img className={style.photo} src={img} alt="#"/>
@@ -194,7 +193,7 @@ const News = () => {
             disabled ={currentSlide ===  instanceRef.current.track.details.slides.length - 1}
             currentSlide = {currentSlide}
             total = {instanceRef.current.track.details.slides.length}
-            
+            style = {opacities[currentSlide]}
           />
           )
         }
