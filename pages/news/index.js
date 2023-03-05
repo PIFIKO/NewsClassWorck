@@ -1,15 +1,24 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import style from './slider.module.scss';
 
+export const  images = [
+  {img: "/img.jpg", minImg: "/Man.jpg", description: 'Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»'},
+  {img: "/img.jpg", minImg: "/Man.jpg", description: 'Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»'},
+  {img: "/img.jpg", minImg: "/Man.jpg", description: 'Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»'},
+  {img: "/img.jpg", minImg: "/Man.jpg", description: 'Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»'},
+]
 
-function ThumbnailPlugin(mainRef) {
+
+   const ThumbnailPlugin = (mainRef) => {
+    console.log(mainRef);
     return (slider) => {
       function removeActive() {
         slider.slides.forEach((slide) => {
           slide.children[0].classList.remove(style.activeSlide)
+
         })
       }
       function addActive(idx) {
@@ -24,22 +33,26 @@ function ThumbnailPlugin(mainRef) {
           })
         })
       }
-  
+      
       slider.on("created", () => {
         if (!mainRef.current) return
+        
         addActive(slider.track.details.rel)
         addClickEvents()
+        
         mainRef.current.on("animationStarted", (main) => {
           removeActive()
           const next = main.animator.targetIdx || 0
           addActive(main.track.absToRel(next))
           slider.moveToIdx(Math.min(slider.track.details.maxIdx, next))
+          
         })
       })
     }
   }
   function Arrow(props) {
     const disabeld = props.disabled ? `${style.arrowDisabled}` : ""
+    
     return (
       <svg
         onClick={props.onClick}
@@ -83,10 +96,9 @@ function ThumbnailPlugin(mainRef) {
 
 
  function Couner(props){
-  const disabeld = props.disabled ? `${style.counerNum}` : `${style.counerDisabled}`
-  console.log(props.disabled)
+  const disabeld = props.disabled ? `${style.counerNum}` : `${style.counerDisabled}`;
   return(
-    <div className= {style.couner}>
+    <div  className= {style.couner}>
       <span className={style.counerNum}>{props.currentSlide + 1}</span>
         <span className={style.counerNum}>/</span> 
       <span className={disabeld}>{props.total}</span>
@@ -95,62 +107,65 @@ function ThumbnailPlugin(mainRef) {
  }
 
 const News = () => {
-    
-
-const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const [loaded, setLoaded] = useState(false);
-  const [opacities, setOpacities] = useState([]);
+  const [opacities, setOpacities] = useState([])
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
-    loop: true,
+    slides: images.length,
+    rubberband: false,
+    
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel)
     },
     created() {
       setLoaded(true)
     },
+    detailsChanged(s) {
+      const new_opacities = s.track.details.slides.map((slide) => {
+      return(
+        slide.portion
+      )
+    })
+      setOpacities(new_opacities)
+    },
   })
-  
+
+  const Plugin = useMemo(() => {
+    return(
+      ThumbnailPlugin(instanceRef)
+    )
+  },[])
+
   const [thumbnailRef] = useKeenSlider(
     {
       initial: 0,
-      
+      slides: images.length,
       slides: {
         perView: 4,
         spacing: 10,
       },
     },
-    [ThumbnailPlugin(instanceRef)]
+    [Plugin]
   )
+ 
 
   return (
     <div className={style.container}>
-      <div ref={sliderRef} className={`keen-slider ${style.keen__slider}`}>
-        <div className= "keen-slider__slide number-slide1  " >
-             <div className={style.photo} key="1">
-                     <a  href="" className={style.description}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»</a>
-                     <img className={style.photo} src="/img.jpg" />
-             </div>
-        </div>
-        <div className="keen-slider__slide number-slide2 " >
-            <div className={style.photo} key="2">
-                <a  href="" className={style.description}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»</a>
-                <img className={style.photo} src="/img.jpg" />
-            </div>
-        </div>
-        <div className="keen-slider__slide number-slide3 " >
-            <div className={style.photo} key="3">
-                <a  href="" className={style.description}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»</a>
-                <img className={style.photo} src="/img.jpg" />
-            </div>
-        </div>
-        <div className="keen-slider__slide number-slide4  " >
-            <div className={style.photo} key="4">
-                <a  href="" className={style.description}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б таке допускали, в нашій команді немає»</a>
-                <img className={style.photo} src="/img.jpg" />
-            </div>
-        </div>
+      <div ref={sliderRef}  className= {style.keen__slider}>
+        { images.map(({img, description}, idx) =>{
+            return(
+              <div 
+              className= "keen-slider__slide" 
+              style={{ opacity: opacities[idx] }}
+              key = {idx} >
+                      <a href="#"  className={style.description}>{description}</a>
+                      <img className={style.photo} src={img} alt="#"/>
+              </div>
+            )   
+        })
         
+        }
         {loaded && instanceRef.current && (
           <>
             <Arrow
@@ -164,11 +179,11 @@ const [currentSlide, setCurrentSlide] = useState(0);
             <Arrow
               onClick={(e) =>
                 e.stopPropagation() || instanceRef.current?.next()
+                
               }
               disabled={
                 currentSlide ===
                 instanceRef.current.track.details.slides.length - 1
-                
               }
               
             />
@@ -179,37 +194,26 @@ const [currentSlide, setCurrentSlide] = useState(0);
             disabled ={currentSlide ===  instanceRef.current.track.details.slides.length - 1}
             currentSlide = {currentSlide}
             total = {instanceRef.current.track.details.slides.length}
+            
           />
           )
         }
       </div>
-
-      <div ref={thumbnailRef} className={` ${style.thumbnail}`}>
-        <div className="keen-slider__slide number-slide1 ">
-            <div className={style.wrapper}>
-                <div><img className={style.img} src='/Man.jpg' alt="" /></div> 
-                <div className={style.title}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б...</div>
+      <div  ref={thumbnailRef} className={style.thumbnail}>
+      { images.map(({minImg, description},idx) =>{
+            
+            return(
+            <div  className="keen-slider__slide" key = {idx} >
+              <div className={style.wrapper}>
+                  <div className={style.img}><img src={minImg} alt="#" /></div> 
+                  <div className={style.title}>
+                    {description.length >= 77 ? description.slice(0, 77) + '...' : description}
+                  </div> 
+              </div>
             </div>
-        </div>
-        <div className="keen-slider__slide number-slide2 ">
-            <div className={style.wrapper}>
-                <div><img className={style.img} src='/Man.jpg' alt="" /></div> 
-                <div className={style.title}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б...</div>
-            </div>
-        </div>
-        <div className="keen-slider__slide number-slide3 ">
-            <div className={style.wrapper}>
-                <div><img className={style.img} src='/Man.jpg' alt="" /></div> 
-                <div className={style.title}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б...</div>
-            </div>
-        </div>
-        <div className="keen-slider__slide number-slide 4 ">
-            <div className={style.wrapper}>
-                <div><img className={style.img} src='/Man.jpg' alt="" /></div> 
-                <div className={style.title}>Андрій Єрмак: «В нас інші прізвища, ніж у творців Мінських угод. Людей, які б...</div>
-            </div>
-        </div>
-        
+            )   
+        })
+        }
       </div>
       
     </div>

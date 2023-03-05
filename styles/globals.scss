@@ -73,11 +73,15 @@ h6 {
 
 a {
     text-decoration: none;
-    color: inherit;
-    display: inline-block;
+    
+    
     &:hover {
         text-decoration: none;
-        color: inherit;
+        
+    }
+    &:active {
+        text-decoration: none;
+        
     }
 }
 
