@@ -12,11 +12,11 @@ const Menu = () =>{
                         </div>
                         <div className={style.title}>Меню</div>
                     </menu>
-                    <ul className={style.city}>
-                        <li><a href="#">Київ</a></li>
-                        <li><a href="#">Одеса</a></li>
-                        <li><a href="#">Харків</a></li>
-                    </ul>   
+                    <div className={style.city}>
+                        <a href="#">Київ</a>
+                        <a href="#">Одеса</a>
+                        <a href="#">Харків</a>
+                    </div>   
                 </div>
                 <div className={style.wrapperLink}>
                     <form className={style.serch}>

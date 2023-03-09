@@ -1,4 +1,6 @@
 import style from './war.module.scss';
+import NewsTabBlock from '../../components/NewsTabBlock/NewsTabBlock'
+
 import fire from '../../public/svg/fire.svg';
 import camera from '../../public/svg/camera.svg';
 
@@ -6,56 +8,7 @@ const War = () =>{
     return(
         <div className= {style.container}>
             <div className= {style.wrapper}>
-                <div className={style.news}>
-                    <div className= {style.title}>
-                        <h2 className = {style.des}>Всі новини</h2>
-                        <a className = {style.lin} href="#">Архів</a>
-                    </div>
-                    <div className= {style.wrapperTab}>
-                        <div className={style.tabActive}>Всі</div>
-                        <div className={style.tab}>Новини</div>
-                        <div className={style.tab}>Статті</div>
-                    </div>
-                    <div className= {style.newsWrapper}>
-                        <div className = {style.newsInfo}>
-                            <a href="" className = {style.newsHeve}>
-                                <img src='/svg/fire.svg' alt="" />
-                                <div className= {style.newsHeveDesFire}>Термінова новина</div>
-                            </a>
-                            <a href="" className = {style.newsDes}>
-                            <span className = {style.timer}>14:59</span> "Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано
-                            </a>
-                            <hr />
-                        </div>
-                        <div className = {style.newsInfo}>
-                            <a  href="" className = {style.newsHeve}>
-                                <img src='/svg/camera.svg' alt="" />
-                                <div className= {style.newsHeveDesCam}>Новина з фото</div>
-                            </a>
-                            <a href="" className = {style.newsDes}>
-                            <span className = {style.timer}>14:59</span> "Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано
-                            </a>
-                            <hr />  
-                        </div>  
-                        <div className = {style.newsInfo}>
-                            <a href="" className = {style.newsDes}>
-                            <span className = {style.timer}>14:59</span> "Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано
-                            </a>
-                            <hr />  
-                        </div>  
-                        <div className = {style.newsInfo}>
-                            <a href="" className = {style.newsDes}>
-                            <span className = {style.timer}>14:59</span> "Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано
-                            </a>
-                            <hr />  
-                        </div>  
-                          
-                        <div className = {style.whiteBlock}></div>
-                    </div>   
-                    <button className = {style.more}> 
-                            <img className ={style.moreImg} src='/svg/group.svg' alt="" /> Завантажити ще 
-                    </button>
-                </div>
+                <NewsTabBlock/>
                 <div className={style.choise} >
                     <div className={style.choiseTitle}>
                         Вибір редакції
