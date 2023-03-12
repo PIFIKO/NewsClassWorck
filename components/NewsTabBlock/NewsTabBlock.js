@@ -3,12 +3,18 @@ import {useState, useEffect} from 'react'
 import style from './NewsTabBlock.module.scss'
 
 export const newsArr = [
-    { type: 'news', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: 'fire'},
-    { type: 'news',des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: 'photo'},
+    { type: 'news', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: true, title: 'Термінова новина', img: '/svg/fire.svg', styleTitle: style.newsHeveDesFire},
+    { type: 'news',des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: true, title: 'Новина з фото',img: '/svg/camera.svg',styleTitle: style.newsHeveDesCam},
     {type: 'articles', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: null},
     { type: 'articles', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: null},
-    { type: 'news', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: 'photo'},
+    { type: 'news', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: true, title: 'Новина з фото',img: '/svg/camera.svg',styleTitle: style.newsHeveDesCam},
+    
 
+]
+export const buttonTab = [
+    {filter: 'all' , title: 'Всі'},
+    {filter: 'news' , title: 'Новини'},
+    {filter: 'articles' , title: 'Статті'},
 ]
 
 
@@ -33,25 +39,26 @@ const NewsTabBlock = () =>{
                     <a className = {style.lin} href="#">Архів</a>
                 </div>
                 <div className= {style.wrapperTab}>
-                    <div onClick={() => setnewsTab('all')} className={style.tabActive}>Всі</div>
-                    <div onClick={() => setnewsTab('news')} className={style.tab}>Новини</div>
-                    <div onClick={() => setnewsTab('articles')} className={style.tab}>Статті</div>
+                    {buttonTab.map(({filter, title}, id)=>{
+                        const active = newsTab === filter ? style.tabActive : style.tab
+                        return(
+                            <div key = {id} onClick={() => setnewsTab(filter)} className={active}>{title}</div>
+                        )
+                        
+                    })}
+                   
                 </div>
                 <div className= {style.newsWrapper}>
                     
-                    {news.map(({des, time, newsHeve}, id) =>{
+                    {news.map(({des, time, newsHeve, title,img, styleTitle}, id) =>{
                         return(
                         <div key={id} className = {style.newsInfo}>
-                            {newsHeve == 'photo' ? 
-                            <a  href="" className = {style.newsHeve}>
-                                <img src= '/svg/camera.svg'  alt="" />
-                                <div className= {style.newsHeveDesCam}>Новина з фото</div>
-                            </a> : null}
-                            {newsHeve == 'fire' ? 
-                            <a href="" className = {style.newsHeve}>
-                                <img src='/svg/fire.svg' alt="" />
-                                <div className= {style.newsHeveDesFire}>Термінова новина</div>
-                            </a> : null}
+                        {newsHeve ? 
+                        <a  href="#" className = {style.newsHeve}>
+                            <img src= {img}   alt="ico" />
+                            <div className= {styleTitle}>{title}</div>
+                        </a> : null}
+
                         <a href="" className = {style.newsDes}>
                             <span className = {style.timer}>{time}</span> {des}
                         </a>

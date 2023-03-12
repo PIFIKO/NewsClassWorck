@@ -38,6 +38,7 @@
     color: #919191;
     height: 28px;
     padding: 4px 8px 2px 8px;
+    cursor: pointer;
 }
 
 .tabActive{
@@ -49,6 +50,7 @@
     background: #FFEAE0;
     border-radius: 4px;
     padding: 4px 8px 2px 8px;
+    cursor: pointer;
 }
 .newsWrapper{
     margin-top: 32px;
@@ -110,4 +112,8 @@
     gap: 8px;
     bottom: 24px;
     cursor: pointer;
+}
+.moreImg{
+    width: 20px;
+    height: 20px;
 }
