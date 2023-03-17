@@ -1,4 +1,4 @@
-
+@import './variables/all.scss';
 
 @font-face {
     font-family: 'TT Severs';
@@ -37,6 +37,7 @@
 
 html,
 body {
+  height: 100%;  
   padding: 0;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +45,7 @@ body {
 }
 main,
 footer{
-    background: #F7F7F7;
+    background: $Neutral-20;
 }
 * {
     font-family: 'TT Severs';
@@ -86,7 +87,7 @@ p {
     padding: 0;
 }
 hr{
-    border: 1px solid #EBEBEB;
+    border: 1px solid $Neutral-30;
     margin-top: 24px;
     margin-bottom: 24px;
 }

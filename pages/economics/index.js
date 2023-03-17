@@ -1,6 +1,6 @@
 import style from '../economics/economics.module.scss'
 import NewsBlock from '../../components/NewsBlock/NewsBlock';
-import styleCol from '../war/war.module.scss';
+
 import Writers from '../../components/Writers/Writers'
 
 const state  = {

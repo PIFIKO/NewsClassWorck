@@ -1,4 +1,4 @@
-
+@import '../../styles/variables/all.scss';
 
 
 .bgButtonNext{
@@ -20,7 +20,7 @@
     width: 48px;
     height: 48px;
     right: 8px;
-    background: rgba(255, 255, 255, 0.16);
+    background: $Neutral-20;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.24);
     border-radius: 88px;
     border: none;
@@ -44,22 +44,22 @@
     z-index: 1;
     left: 0px;
     top: -15px;
-    background: linear-gradient(90deg, #FFFFFF 34.24%, rgba(217, 217, 217, 0) 105.15%, rgba(255, 255, 255, 0) 105.15%);
+    background: linear-gradient(90deg, #FFFFFF 34.24%, #d9d9d900 105.15%, rgba(255, 255, 255, 0) 105.15%);
     transform: rotate(0deg);
 }
 .pomoBlock{
     padding: 16px;
     width: 304px;
     height: 105px;
-    background: #F7F7F7;
+    background: $Neutral-20;
     border-radius: 8px;
     cursor: pointer;
 }
 .newsDes{
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #182840;
+    color: $Main-color-blue;
 }
 
 
@@ -68,7 +68,7 @@
     grid-column: 2/3;
     margin-top: 30px;
     padding: 32px 24px 32px 24px;
-    background: #FFFFFF;
+    background: $Neutral-10;
     border-radius: 12px;
 }
 .wrapperCol{
@@ -78,17 +78,17 @@
 }
 .title{
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-md-h;
     line-height: 140%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .allCol{
     border: none;
     background:none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #FF7534;
+    color: $Main-color-Orange;
     cursor: pointer;
 }
 .wrapperPromo{
@@ -108,18 +108,18 @@
 }
 .timePromo{
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-sm-p;
     line-height: 140%;
     text-transform: uppercase;
-    color: #707070;
+    color: $Neutral-80;
     margin-top: 2px;
 }
 .titlePromo{
     font-weight: 600;
-    font-size: 32px;
+    font-size: $font-size-lg-h;
     line-height: 130%;
     margin-top: 10px;
-    color: #182840;
+    color: $Main-color-blue;
 }
 .labelePromo{
     display: flex;

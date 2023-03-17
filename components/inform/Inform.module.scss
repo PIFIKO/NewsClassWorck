@@ -1,6 +1,8 @@
+@import '../../styles/variables/all.scss';
+
 .inform{
-    border-top: 1px solid #DEDFE0;
-    border-bottom: 1px solid #DEDFE0;
+    border-top: 1px solid $Neutral-40;
+    border-bottom: 1px solid $Neutral-40;
 }
 .container{
     display: block;
@@ -18,23 +20,23 @@
 }
 .title{
     font-weight: 600;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 130%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .descrip{
     font-weight: 400;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #515151;
+    color: $Neutral-90;
     margin-top: 8px;
 }
 .About{
     font-weight: 600;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 130%;
     text-transform: uppercase;
-    color: #2D2D2D;
+    color: $Neutral-100;
     margin-bottom: 24px;
 }
 .contactUs{
@@ -44,9 +46,9 @@
 }
 .contactUsTitle{
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-md-h;
     line-height: 140%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .contactUswrapper{
     display: flex;
@@ -55,7 +57,7 @@
 }
 .contactUsDes{
     font-weight: 400;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
     color: #434343;
     height: 22px;

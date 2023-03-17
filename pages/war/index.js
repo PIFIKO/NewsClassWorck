@@ -44,8 +44,11 @@ const War = () =>{
         <div className= {style.container}>
             <div className= {style.wrapper}>
                 <NewsTabBlock/>
-                <ChoceRedaction/>
-                <RegionBlock/>
+                <div>
+                    <ChoceRedaction/>
+                    <RegionBlock/>
+                </div>
+                
             </div>
         </div>
     )

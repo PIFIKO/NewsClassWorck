@@ -1,9 +1,11 @@
+@import '../../styles/variables/all.scss';
+
 
 .politics{
     padding: 24px 32px 32px;
     width: 976px;
     height: 978px;
-    background: #FFFFFF;
+    background: $Neutral-10;
     border-radius: 12px;
 
 }
@@ -14,17 +16,17 @@
 }
 .title{
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-md-h;
     line-height: 140%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .allCol{
     border: none;
     background:none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #FF7534;
+    color: $Main-color-Orange;
     cursor: pointer;
 }
 .wrapperPolNews{
@@ -46,18 +48,18 @@
 }
 .timeBig{
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-sm-p;
     line-height: 140%;
     text-transform: uppercase;
-    color: #707070;
+    color: $Neutral-80;
     margin-top: 16px;
 }
 .bigTitle{
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-md-h;
     line-height: 140%;
     margin-top: 11px;
-    color: #182840;
+    color: $Main-color-blue;
 }
 .litNews{
     grid-column: 1/2;
@@ -75,10 +77,10 @@
 }
 .litTitle{
     font-weight: 600;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 130%;
     margin-top: 12px;
-    color: #182840;
+    color: $Main-color-blue;
 }
 
 .colNews{
@@ -87,11 +89,11 @@
 }
 .colNewsTitle{
     font-weight: 500;
-    font-size: 16px;
+    font-size: $Main-color-blue;
     line-height: 140%;
     margin-bottom: 32px;
     text-transform: uppercase;
-    color: #515151;
+    color: $Neutral-90;
 }
 .newsInfo{
     margin-top: 24px;
@@ -113,31 +115,31 @@
 }
 .newsHeveDesFire{
     font-weight: 600;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #FF7534;
+    color: $Main-color-Orange;
     display: flex;
     align-items: center;
 }
 .newsHeveDesCam{
     font-weight: 600;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #979EA9;
+    color: $Border-color-blue;
     display: flex;
     align-items: center;
 }
 .newsDes{
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #182840;
+    color: $Main-color-blue;
 }
 .timer{
     font-weight: 400;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #707070;
+    color: $Neutral-80;
 }
 .allNews{
     gap: 16px;
@@ -146,9 +148,9 @@
     width: 157px;
     height: 32px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #182840;
+    color: $Main-color-blue;
     display: flex;
     align-items:center;
     cursor: pointer;
@@ -157,7 +159,7 @@
 .ring{
     width: 32px;
     height: 32px;
-    border: 1px solid #979EA9;
+    border: 1px solid $Border-color-blue;
     border-radius: 100%;
     display: flex;
     justify-content: center;

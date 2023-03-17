@@ -19,10 +19,10 @@ const Menu = () =>{
                     </div>   
                 </div>
                 <div className={style.wrapperLink}>
-                    <form className={style.serch}>
-                        <button className= {style.serchBtn}><img className = {style.serchImg} src='/svg/MagnifyingGlass.svg' alt="MagnifyingGlass" /></button>
+                    <div className={style.serch}>
+                        <button type="submit" className= {style.serchBtn}><img className = {style.serchImg} src='/svg/MagnifyingGlass.svg' alt="MagnifyingGlass" /></button>
                         <input className ={style.serchIn} type="text" name="serchNews" placeholder="Пошук новин"/>
-                    </form>
+                    </div>
                     <div className = {style.social}>
                         <a href=""><img src='/svg/TelegramlogoGre.svg' alt="" /></a>
                         <a href=""><img src='/svg/Facebook.svg' alt="" /></a>

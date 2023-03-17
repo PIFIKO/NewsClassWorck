@@ -1,6 +1,7 @@
+@import '../../styles/variables/all.scss';
+
 .region{
-    grid-column: 2/3;
-    grid-row: 2/3;
+    margin-top: 30px;
 }
 .titleWrapper{
     display: flex;
@@ -9,34 +10,37 @@
 }
 .choiseTitle{
     font-weight: 700;
-    font-size: 32px;
+    font-size: $font-size-lg-h;
     line-height: 130%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .regionAll{
     font-weight: 600;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #FF7534;
+    color: $Main-color-Orange;
 }
 .regionWrapper{
-    display: grid;
-    grid-template-columns: repeat(3, (314.67px));
-    column-gap: 16px;
+    min-height: 691px;
     margin-top: 32px;
 }
 .regionCard{
-    background: #FFFFFF;
+    background: $Neutral-10;
     border-radius: 12px;
     padding: 16px 16px 32px 16px;
+    display: flex;
+    flex-direction: column;
     min-height: 691px;
-    position: relative;
+    width: 315px;
 }
+.regionCard button:last-of-type {
+    margin-top: auto;
+  }
 .cardTitle{
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-md-h;
     line-height: 140%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .listCard{
     margin-top: 24px;
@@ -46,30 +50,31 @@
         
     }
 }
-.listCard hr:nth-last-child(1) { 
+.listTitle:nth-last-child(1) hr:nth-last-child(1) { 
     display: none;
   }
 .listCardData{
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-sm-p;
     line-height: 140%;
     text-transform: uppercase;
-    color: #F3560C;
+    color: $Pressed-color-Orange;
     margin-bottom: 12px;
 }
 .listTitle{
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #182840;
+    color: $Main-color-blue;
     text-align: left;
 }
 .timer{
     font-weight: 400;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #707070;
+    color: $Neutral-80;
 }
+
 .allNews{
     gap: 16px;
     border: none;
@@ -77,21 +82,19 @@
     width: 157px;
     height: 32px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #182840;
+    color: $Main-color-blue;
     display: flex;
     justify-content: center;
     align-items:center;
     cursor: pointer;
-    position: absolute;
-    margin-top: 64px;
-    bottom: 32px;
+    
 }
 .ring{
     width: 32px;
     height: 32px;
-    border: 1px solid #979EA9;
+    border: 1px solid $Border-color-blue;
     border-radius: 100%;
     display: flex;
     justify-content: center;

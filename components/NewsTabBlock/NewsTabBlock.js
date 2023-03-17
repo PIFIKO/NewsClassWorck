@@ -8,7 +8,11 @@ export const newsArr = [
     {type: 'articles', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: null},
     { type: 'articles', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: null},
     { type: 'news', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: true, title: 'Новина з фото',img: '/svg/camera.svg',styleTitle: style.newsHeveDesCam},
-    
+    { type: 'news', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: true, title: 'Термінова новина', img: '/svg/fire.svg', styleTitle: style.newsHeveDesFire},
+    { type: 'news',des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: true, title: 'Новина з фото',img: '/svg/camera.svg',styleTitle: style.newsHeveDesCam},
+    {type: 'articles', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: null},
+    { type: 'articles', des: '"Відбудова України — завдання усього світу": промова Зеленського на конференції в Лугано', time: '14:59',newsHeve: null},
+   
 
 ]
 export const buttonTab = [
@@ -54,15 +58,15 @@ const NewsTabBlock = () =>{
                         return(
                         <div key={id} className = {style.newsInfo}>
                         {newsHeve ? 
-                        <a  href="#" className = {style.newsHeve}>
-                            <img src= {img}   alt="ico" />
-                            <div className= {styleTitle}>{title}</div>
-                        </a> : null}
+                            <a  href="#" className = {style.newsHeve}>
+                                <img src= {img}   alt="ico" />
+                                <div className= {styleTitle}>{title}</div>
+                            </a> : null}
 
-                        <a href="" className = {style.newsDes}>
-                            <span className = {style.timer}>{time}</span> {des}
-                        </a>
-                        <hr />  
+                            <a href="#" className = {style.newsDes}>
+                                <span className = {style.timer}>{time}</span> {des}
+                            </a>
+                            <hr/>  
                         </div>
                         )
                     })}

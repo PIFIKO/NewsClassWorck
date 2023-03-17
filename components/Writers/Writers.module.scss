@@ -1,19 +1,21 @@
+@import '../../styles/variables/all.scss';
+
 .pepolWrapp{
     
 }
 .pepol{
     height: 210px;
     padding: 24px 0 24px 0;
-    border-bottom: 1px solid #DEDFE0;
+    border-bottom: 1px solid $Neutral-30;
 }
 .pepol:nth-last-child(1){
     border-bottom: none;
 }
 .columns{
     grid-column: 1/2;
-    height: 991px; 
+    min-height: 991px; 
     padding: 16px 16px 24px 16px;
-    background: #FFFFFF;
+    background: $Neutral-10;
     border-radius: 12px;
 }
 .wrapperCol{
@@ -22,17 +24,17 @@
 }
 .title{
     font-weight: 600;
-    font-size: 24px;
+    font-size: $font-size-md-h;
     line-height: 140%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .allCol{
     border: none;
     background:none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: $font-size-md-p;
     line-height: 140%;
-    color: #FF7534;
+    color: $Main-color-Orange;
     cursor: pointer;
 }
 
@@ -44,43 +46,43 @@
 }
 .name{
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #2D2D2D;
+    color: $Neutral-100;
 }
 .position{
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-sm-p;
     line-height: 140%;
     text-transform: uppercase;
-    color: #707070;
+    color: $Neutral-80;
     margin-top: 4px;
 }
 .des{
     font-weight: 600;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 130%;
-    color: #182840;
+    color: $Main-color-blue;
     margin-top: 16px;
 }
 .time{
     font-weight: 400;
-    font-size: 12px;
+    font-size: $font-size-sm-p;
     line-height: 140%;
     text-transform: uppercase;
-    color: #707070;
+    color: $Neutral-80;
     margin-top: 12px;
 }
 .allCols{
     width: 272px;
     height: 37px;
-    border: 1px solid #979EA9;
+    border: 1px solid $Border-color-blue;
     border-radius: 4px;
     background: none;
     font-weight: 500;
-    font-size: 16px;
+    font-size: $font-size-lg-p;
     line-height: 140%;
-    color: #182840;
+    color: $Main-color-blue;
     display: block;
     margin: 0 auto;
     margin-top: 48px;
