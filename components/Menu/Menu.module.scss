@@ -154,5 +154,118 @@
   text-transform: uppercase;
   color: $Neutral-100;
 }
+// .langsSel{
+//     // A reset of styles, including removing the default dropdown arrow
+//     appearance: none;
+//     background-color: $Neutral-10;
+//     border: none;
+//     margin: 0;
+//     width: 44px;
+//     height: 20px;
+//     font-weight: 500;
+//     font-size: 14px;
+//     line-height: 17px;
+//     cursor: pointer;
+//     // Stack above custom arrow
+//     z-index: 1;
+  
+//     &::-ms-expand {
+//       display: none;
+//     }
+//     outline: none;
+// }
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+  border: none;
+  select,
+  &::after {
+    grid-area: select;
+  }
+
+  width: 44px;
+     height: 20px;
+
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+
+  // Optional styles
+  // remove for transparency
+  background-color: #fff;
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+  // Custom arrow
+  &:not(.select--multiple)::after {
+    content: "";
+    justify-self: end;
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  }
+}
+
+@media (max-width: 1439px) {  
+  
+}
+
+@media (max-width: 1200px) {  
+  .container {
+      min-width: 990px;
+  }
+  .wrapper{
+    width: 306px;
+  }
+  .wrapperLink{
+    width: 590px;
+  }
+  .serch{
+    width: 242px;
+  }
+  .divider{
+    width: 46px;
+  }
+  
+}
+
+@media (max-width: 992px) {
+  .container{
+    min-width: 960px;
+  }
+  
+  .divider{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container{
+    min-width: 720px;
+  }
+  .wrapperLink{
+    width: 350px;
+  }
+  .social{
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .container{
+    min-width: 320px;
+  }
+  .langs{
+    display: none;
+  }
+}
+
+
 
   

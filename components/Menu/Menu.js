@@ -1,6 +1,11 @@
+import { useState } from 'react';
+
 import style from './Menu.module.scss'
 
 const Menu = () =>{
+
+    const [leng, useLang] = useState(null);
+    console.log(leng)
     return(
         <div className = {style.headMenu}>
             <div className={style.container}>
@@ -31,9 +36,14 @@ const Menu = () =>{
                     </div>
                     <div className={style.divider}><span></span></div>
                     <ul className={style.langs}>
-                        <li className = {style.lang}>RU</li>
-                        <li className = {style.langActive}>UA</li>
+                        <li onClick = {() => useLang('ru')} className = {style.lang}>RU</li>
+                        <li onClick = {() => useLang('ua')} className = {style.langActive}>UA</li>
                     </ul>
+                    
+                    <select className={style.langsSel}>
+                        <option value = 'ru'>RU</option>
+                        <option value = 'ua' selected>UA</option>
+                    </select>
                 </div> 
             </div>
             

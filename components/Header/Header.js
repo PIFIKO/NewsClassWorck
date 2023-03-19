@@ -9,8 +9,8 @@ const Header = () =>{
     return(
     <header>
         <Menu/>
-        <Nav/>
-        <ScrollLine/>
+        {/* <Nav/>
+        <ScrollLine/> */}
     </header>
     )
   
