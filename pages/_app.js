@@ -13,6 +13,7 @@ const MyApp = ({ Component, pageProps }) => (
     <main>
       <Component {...pageProps} />
     </main>
+    
   </Layout>
 );
 
