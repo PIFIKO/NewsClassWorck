@@ -40,11 +40,13 @@ const Menu = () =>{
                         <li onClick = {() => useLang('ua')} className = {style.langActive}>UA</li>
                     </ul>
                     
-                    <select className={style.langsSel}>
-                        <option value = 'ru'>RU</option>
-                        <option value = 'ua' selected>UA</option>
+                    <select  className={style.langsSel}>
+                        <option className = {style.langActive} value = 'ru'>RU</option>
+                        <option className = {style.lang} value = 'ua' selected>UA</option>
                     </select>
                 </div> 
+                
+    
             </div>
             
         </div>

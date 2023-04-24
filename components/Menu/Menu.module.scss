@@ -154,62 +154,83 @@
   text-transform: uppercase;
   color: $Neutral-100;
 }
-// .langsSel{
-//     // A reset of styles, including removing the default dropdown arrow
-//     appearance: none;
-//     background-color: $Neutral-10;
-//     border: none;
-//     margin: 0;
-//     width: 44px;
-//     height: 20px;
-//     font-weight: 500;
-//     font-size: 14px;
-//     line-height: 17px;
-//     cursor: pointer;
-//     // Stack above custom arrow
-//     z-index: 1;
+.langsSel{
+    // A reset of styles, including removing the default dropdown arrow
+    appearance: none;
+    background-color: $Neutral-10;
+    border: none;
+    margin: 0;
+    width: 44px;
+    height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    // Stack above custom arrow
+    z-index: 1;
   
-//     &::-ms-expand {
-//       display: none;
-//     }
-//     outline: none;
-// }
-.select {
-  display: grid;
-  grid-template-areas: "select";
-  align-items: center;
-  position: relative;
-  border: none;
-  select,
-  &::after {
-    grid-area: select;
-  }
-
-  width: 44px;
-     height: 20px;
-
-  border: 1px solid var(--select-border);
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-
-  font-size: 1.25rem;
-  cursor: pointer;
-  line-height: 1.1;
-
-  // Optional styles
-  // remove for transparency
-  background-color: #fff;
-  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-
-  // Custom arrow
-  &:not(.select--multiple)::after {
-    content: "";
-    justify-self: end;
-    width: 0.8em;
-    height: 0.5em;
-    background-color: var(--select-arrow);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-  }
+    &::-ms-expand {
+      display: none;
+    }
+    outline: none;
+}
+.langsSel{
+  // appearance: none;
+  // border:0;
+  // outline: 0;
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 17px;
+  // text-transform: uppercase;
+  // color: $Neutral-100;
+  // width: 44px;
+  // height: 20px;
+  // padding: 3px 21px 3px 2px;
+  // background: url("/svg/arrow.svg")
+  // no-repeat right 7px center / 9px,
+  // linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+  //   cursor: pointer;
+  //   option {
+  //     color: inherit;
+  //     background-color: #747474;
+  //   }
+  //   &:focus {
+  //     outline: none;
+  //   }
+  //   &::-ms-expand {
+  //     display: none;
+  //   }
+      width: 44px;
+      height: 20px;
+      padding: 3px 21px 3px 2px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: $Neutral-100;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background: url("/svg/arrow.svg") 30px / 9px no-repeat $Neutral-10;
+      
+      &::-ms-expand { 
+      display: none; /* удалите стрелку по умолчанию в IE 10 и 11 */
+      }
+      select{
+        height: 100px;
+      }
+      option {
+        background: #FFFFFF;
+        appearance: 1px solid #EBEBEB;
+        box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        
+      }
+      &:focus {
+        outline: none;
+        
+      }
 }
 
 @media (max-width: 1439px) {  
